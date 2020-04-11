@@ -7,6 +7,6 @@ class SuccessfulProjectSetupTest {
 
     @Test
     fun projectSetupSuccessful() {
-        Assert.assertTrue(true)
+        Assert.assertTrue(false)
     }
 }
