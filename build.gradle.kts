@@ -23,7 +23,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
-	testRuntimeOnly ("junit:junit:4.12")
+	testImplementation ("junit:junit:4.12")
 	runtimeOnly("mysql:mysql-connector-java")
 
 }
