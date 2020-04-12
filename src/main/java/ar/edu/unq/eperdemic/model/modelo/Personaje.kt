@@ -1,13 +1,17 @@
-package ar.edu.unq.eperdemic.controllers.modelo
+package ar.edu.unq.eperdemic.model.modelo
 
-import ar.edu.unq.eperdemic.controllers.modelo.exception.MuchoPesoException
+import ar.edu.unq.eperdemic.model.modelo.exception.MuchoPesoException
+import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonInclude
 import java.io.Serializable
 import java.util.*
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 class Personaje(val nombre: String) : Serializable {
     var pesoMaximo = 0
     var xp = 0
     var vida = 0
+    @JsonIgnore
     var inventario: MutableSet<Item> = HashSet()
 
 
@@ -19,6 +23,7 @@ class Personaje(val nombre: String) : Serializable {
         inventario.add(item)
     }
 
+    @get:JsonIgnore
     val pesoActual: Int
         get() {
             var pesoActual = 0

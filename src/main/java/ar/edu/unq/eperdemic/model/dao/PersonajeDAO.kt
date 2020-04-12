@@ -1,6 +1,6 @@
-package ar.edu.unq.eperdemic.controllers.dao
+package ar.edu.unq.eperdemic.model.dao
 
-import ar.edu.unq.eperdemic.controllers.modelo.Personaje
+import ar.edu.unq.eperdemic.model.modelo.Personaje
 
 /**
  * Tiene la responsabilidad de guardar y recuperar personajes desde

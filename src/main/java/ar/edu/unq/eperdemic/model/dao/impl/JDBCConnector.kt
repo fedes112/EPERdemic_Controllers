@@ -1,4 +1,4 @@
-package ar.edu.unq.eperdemic.controllers.dao.impl
+package ar.edu.unq.eperdemic.model.dao.impl
 
 import java.sql.Connection
 import java.sql.DriverManager

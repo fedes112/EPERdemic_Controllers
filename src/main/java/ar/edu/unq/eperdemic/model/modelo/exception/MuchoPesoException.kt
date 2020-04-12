@@ -1,7 +1,7 @@
-package ar.edu.unq.eperdemic.controllers.modelo.exception
+package ar.edu.unq.eperdemic.model.modelo.exception
 
-import ar.edu.unq.eperdemic.controllers.modelo.Item
-import ar.edu.unq.eperdemic.controllers.modelo.Personaje
+import ar.edu.unq.eperdemic.model.modelo.Item
+import ar.edu.unq.eperdemic.model.modelo.Personaje
 
 class MuchoPesoException(private val personaje: Personaje, private val item: Item) :
     RuntimeException() {
