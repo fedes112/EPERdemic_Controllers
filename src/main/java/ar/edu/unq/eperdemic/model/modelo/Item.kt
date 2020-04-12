@@ -1,4 +1,4 @@
-package ar.edu.unq.eperdemic.controllers.modelo
+package ar.edu.unq.eperdemic.model.modelo
 
 import java.io.Serializable
 

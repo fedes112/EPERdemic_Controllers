@@ -1,9 +1,9 @@
-package ar.edu.unq.eperdemic.controllers.dao.impl
+package ar.edu.unq.eperdemic.model.dao.impl
 
-import ar.edu.unq.eperdemic.controllers.dao.PersonajeDAO
-import ar.edu.unq.eperdemic.controllers.modelo.Personaje
+import ar.edu.unq.eperdemic.model.dao.PersonajeDAO
+import ar.edu.unq.eperdemic.model.modelo.Personaje
 import java.sql.Connection
-import ar.edu.unq.eperdemic.controllers.dao.impl.JDBCConnector.execute
+import ar.edu.unq.eperdemic.model.dao.impl.JDBCConnector.execute
 
 /**
  * Una implementacion de [PersonajeDAO] que persiste
