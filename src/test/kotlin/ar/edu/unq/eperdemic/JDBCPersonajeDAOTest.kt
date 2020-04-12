@@ -1,12 +1,12 @@
 package ar.edu.unq.eperdemic
 
-import ar.edu.unq.eperdemic.model.dao.PersonajeDAO
-import ar.edu.unq.eperdemic.model.dao.impl.JDBCPersonajeDAO
-import ar.edu.unq.eperdemic.model.modelo.Item
-import ar.edu.unq.eperdemic.model.modelo.Personaje
-import org.junit.After
-import org.junit.Assert
-import org.junit.Before
+//import ar.edu.unq.eperdemic.model.dao.PersonajeDAO
+//import ar.edu.unq.eperdemic.model.dao.impl.JDBCPersonajeDAO
+//import ar.edu.unq.eperdemic.model.modelo.Item
+//import ar.edu.unq.eperdemic.model.modelo.Personaje
+//import org.junit.After
+//import org.junit.Assert
+//import org.junit.Before
 import org.junit.Test
 
 

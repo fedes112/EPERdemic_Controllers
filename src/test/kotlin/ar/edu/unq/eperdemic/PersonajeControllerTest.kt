@@ -1,29 +1,31 @@
 package ar.edu.unq.eperdemic
 
-import ar.edu.unq.eperdemic.controllers.PersonajeControllerREST
-import ar.edu.unq.eperdemic.model.dao.PersonajeDAO
-import ar.edu.unq.eperdemic.model.modelo.Personaje
-import ar.edu.unq.eperdemic.services.PersonajeService
-import com.fasterxml.jackson.core.JsonProcessingException
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.datatype.jdk8.Jdk8Module
-import com.fasterxml.jackson.module.kotlin.KotlinModule
-import org.junit.After
-import org.junit.Assert.assertEquals
-import org.junit.Before
+
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.MediaType
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit4.SpringRunner
-import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.MvcResult
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-import org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup
-import java.io.IOException
+
+//import ar.edu.unq.eperdemic.controllers.PersonajeControllerREST
+//import ar.edu.unq.eperdemic.model.dao.PersonajeDAO
+//import ar.edu.unq.eperdemic.model.modelo.Personaje
+//import ar.edu.unq.eperdemic.services.PersonajeService
+//import com.fasterxml.jackson.core.JsonProcessingException
+//import com.fasterxml.jackson.databind.ObjectMapper
+//import com.fasterxml.jackson.datatype.jdk8.Jdk8Module
+//import com.fasterxml.jackson.module.kotlin.KotlinModule
+//import org.junit.After
+//import org.junit.Assert.assertEquals
+//import org.junit.Before
+//import org.springframework.beans.factory.annotation.Autowired
+//import org.springframework.http.MediaType
+//import org.springframework.test.web.servlet.MockMvc
+//import org.springframework.test.web.servlet.MvcResult
+//import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
+//import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
+//import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
+//import org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup
+//import java.io.IOException
 
 @ContextConfiguration(classes = [ControllerTestConfig::class])
 @RunWith(SpringRunner::class)
