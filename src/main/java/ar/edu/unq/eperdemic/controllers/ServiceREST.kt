@@ -5,5 +5,5 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@CrossOrigin(origins = ["http://localhost:3000", "https://heventeando.herokuapp.com"])
+@CrossOrigin(origins = ["http://localhost:3000"])
 annotation class ServiceREST
