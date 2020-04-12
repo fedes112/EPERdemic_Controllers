@@ -1,7 +1,7 @@
 Como medida de fuerza y prevención contra futuras amenazas patógenas, fueron contratados en una compañía la cual está desarrollando un simulador de epidemias codo a codo con un laboratorio de médicos y especialistas. 
 
 <p align="center">
-  <img src="enunciado/pandemia-icon.png" />
+  <img src="enunciado/pandemia-icon.jpeg" />
 </p>
 
 Nos asignaron al equipo de backend, encargado de implementar la lógica de negocio que correrá (por ahora) en un datacenter de la empresa. La aplicación también contará en el futuro con un frontend web el cual interactúra con nuestro backend por medio de una capa de servicios.
