@@ -18,27 +18,22 @@ Luego de horas de discusión y planeamiento, el líder técnico llega a nosotros
 
 La interfaz `PatogenoDAO` declara los siguientes métodos que nosotros debemos implementar:
 
-- `guardar(patogeno: Patogeno )` - Recibe un objeto `Patogeno` y se encarga de persistir en la base de datos. Tener en cuenta que el nombre de cada especie debe ser único para toda la aplicación.
+- `crear(patogeno: Patogeno ): Int` - Recibe un objeto `Patogeno` y se encarga de persistir en la base de datos. 
 
 - `actualizar(patogeno: Patogeno)` - Actualiza el Patogeno recibido por parámetro.
 
-- `recuperar(nombredeDelPatogeno: Patogeno):Patogeno` - Este método devolverá la Patógeno cuyo nombre sea igual al provisto por parámetro. Se espera que este método devuelva, a lo sumo, un solo resultado.
+- `recuperar(idDelpatogeno: Int): Patogeno` - Este método devolverá la Patógeno cuyo id sea igual al provisto por parámetro. Se espera que este método devuelva, a lo sumo, un solo resultado.
 
 - `recuperarTodos(): List<Patogeno>` - Este método deberá devolver una lista de todos los patógenos existentes ordenados alfabéticamente por su nombre en forma ascendente.
 
 
-El equipo de front estara utilizando la interfaz  `PatogenoService`  para comunicarse con nuestro equipo. Este servicio debera implementar los siguientes metodos:
+El equipo de front estara utilizando la interfaz  `PatogenoService`  para comunicarse con nuestro equipo. Este servicio debera implementar metodos que utilizaran al DAO, sumado al siguiente metodo:
 
-- `crearPatogeno(patogeno: Patogeno ): String` - Recibe un objeto `Patogeno` y se encarga de persistir en la base de datos. Tener en cuenta que el nombre de cada especie debe ser único para toda la aplicación.
+- `agregarEspecie(id: Int, nombreEspecie: String, paisDeOrigen : String) : Especie` - Debera lograr que se genere una nueva Especie del Patogeno. Por el momento no nos interesa persistir esa nueva especie, pero si llevar la cuenta de la cantidad de especies del Patogeno.
 
-- `getPatogeno(nombreDelPatogeno: String): Patogeno` - Actualiza el Patogeno recibido por parámetro.
 
-- `getAllPatogenos(nombredeDelPatogeno: Patogeno): List<Patogeno>` - Este método deberá devolver una lista de todos los patógenos existentes ordenados alfabéticamente por su nombre en forma ascendente.
+Adicionalmente, el lider del equipo tecnico nos adelanta que el equipo de operaciones estaran realizando testeos de la simulacion con grandes permutaciones y volumenes de datos, y nos facilita la la siguiente interfaz la cual estaran utilizando para cargar dichos datos en los test, y para la cual deberemos proveer una primera implementacion:
 
-- `agregarEspecie(nombreDelPatogeno: String ): Int` - Debera sumar en uno la cantidad de especies existentes del Patogeno, y devolver ese numero.
-
-Adicionalmente, el equipo de front end estará realizando test de integración que van a interactuar con nuestro `PatogenoService`. En dichos tests ellos darán uso a la siguiente interfaz, para la cual también deberemos proveer una implementación:
- 
 La interfaz `DataService` entiende dos mensajes:
 
 - `deleteAll()` - Se espera que tras ejecutarse esto se elimine toda la información persistida en la base de datos, de manera de poder comenzar el siguiente tests desde cero.

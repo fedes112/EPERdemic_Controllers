@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
-@Suppress("SpringJavaInjectionPointsAutowiringInspection")
 @ServiceREST
 @RequestMapping("/patogeno")
 class PatogenoControllerREST(private val patogenoService: PatogenoService) {
@@ -26,10 +25,10 @@ class PatogenoControllerREST(private val patogenoService: PatogenoService) {
   }
 
   @GetMapping("/{id}")
-  fun findById(@PathVariable id: Int) = patogenoService.getPatogeno(id)
+  fun findById(@PathVariable id: Int) = patogenoService.recuperarPatogeno(id)
 
   @GetMapping
-  fun getAll() = patogenoService.getAllPatogenos()
+  fun getAll() = patogenoService.recuperarATodosLosPatogenos()
 
 
 }

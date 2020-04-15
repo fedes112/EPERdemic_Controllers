@@ -10,11 +10,11 @@ class PatogenoServiceImpl(patogenoDAO: PatogenoDAO) : PatogenoService {
         TODO("not implemented")
     }
 
-    override fun getPatogeno(id: Int): Patogeno {
+    override fun recuperarPatogeno(id: Int): Patogeno {
         TODO("not implemented")
     }
 
-    override fun getAllPatogenos(): List<Patogeno> {
+    override fun recuperarATodosLosPatogenos(): List<Patogeno> {
         TODO("not implemented")
     }
 
