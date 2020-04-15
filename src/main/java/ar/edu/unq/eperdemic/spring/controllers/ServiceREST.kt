@@ -1,4 +1,4 @@
-package ar.edu.unq.eperdemic.controllers
+package ar.edu.unq.eperdemic.spring.controllers
 
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.RestController
