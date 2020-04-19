@@ -24,7 +24,7 @@ object JDBCConnector {
         val user = env.getOrDefault("USER", "root")
         val password = env.getOrDefault("PASSWORD", "root")
         val host = env.getOrDefault("HOST", "localhost")
-        val dataBase = env.getOrDefault("DATA_BASE", "epers_tp1_jdbc")
+        val dataBase = env.getOrDefault("DATA_BASE", "epers_ejemplo_jdbc")
 
         return try {
             val url = "jdbc:mysql://$host:3306/$dataBase?user=$user&password=$password&serverTimezone=UTC&createDatabaseIfNotExist=true"

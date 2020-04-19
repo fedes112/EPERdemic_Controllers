@@ -28,7 +28,7 @@ class PatogenoControllerREST(private val patogenoService: PatogenoService) {
   fun findById(@PathVariable id: Int) = patogenoService.recuperarPatogeno(id)
 
   @GetMapping
-  fun getAll() = patogenoService.recuperarATodosLosPatogenos()
+  fun getAll() = null
 
 
 }
