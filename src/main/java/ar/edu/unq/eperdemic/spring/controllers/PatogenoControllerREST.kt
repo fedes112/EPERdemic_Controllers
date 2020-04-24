@@ -7,14 +7,15 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @ServiceREST
 @RequestMapping("/patogeno")
 class PatogenoControllerREST(private val patogenoService: PatogenoService) {
 
   @PostMapping
-  fun create(@RequestBody patogeno: Patogeno): ResponseEntity<Int> {
+  fun create(@RequestBody patogeno: Patogeno): ResponseEntity<Patogeno> {
     val patogenoId = patogenoService.crearPatogeno(patogeno)
-    return ResponseEntity(patogenoId, HttpStatus.CREATED)
+    return ResponseEntity(patogenoService.recuperarPatogeno(patogenoId), HttpStatus.CREATED)
   }
 
   @PostMapping("/{id}")
@@ -28,7 +29,8 @@ class PatogenoControllerREST(private val patogenoService: PatogenoService) {
   fun findById(@PathVariable id: Int) = patogenoService.recuperarPatogeno(id)
 
   @GetMapping
-  fun getAll() = null
+  fun getAll() = patogenoService.recuperarATodosLosPatogenos()
+
 
 
 }
