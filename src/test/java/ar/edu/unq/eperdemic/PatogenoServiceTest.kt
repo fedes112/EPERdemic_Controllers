@@ -17,19 +17,13 @@ class PatogenoServiceTest {
 
     @Before
     fun crearModelo() {
-       patogeno =  Patogeno("Gripe2")
+        TODO("not implemented")
     }
 
     @Test
     fun alGuardarYLuegoRecuperarSeObtieneObjetosSimilares() {
-        var id = service.crearPatogeno(patogeno)
-        id = id + 0
-        Assert.assertTrue(true)
+        TODO("not implemented")
     }
 
-//    @After
-//    fun emilinarModelo() {
-//        dao.eliminar(patogeno)
-//    }
 
 }
