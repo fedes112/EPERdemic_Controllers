@@ -1,40 +1,30 @@
 package ar.edu.unq.eperdemic.model.modelo
 
-import ar.edu.unq.eperdemic.model.modelo.exception.MuchoPesoException
-import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonInclude
-import java.io.Serializable
-import java.util.*
+import javax.persistence.*
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-class Personaje(val nombre: String) : Serializable {
-    var pesoMaximo = 0
-    var xp = 0
-    var vida = 0
-    @JsonIgnore
-    var inventario: MutableSet<Item> = HashSet()
+@Entity
+class Personaje() {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null
+    @Column(nullable = false, length = 500)
+    var nombre: String? = null
+    var vida: Int = 0
+    var pesoMaximo: Int = 0
 
 
-    fun recoger(item: Item) {
-        val pesoActual = pesoActual
-        if (pesoActual + item.peso > pesoMaximo) {
-            throw MuchoPesoException(this, item)
-        }
-        inventario.add(item)
+
+    constructor(nombre: String) : this() {
+        this.nombre = nombre
     }
 
-    @get:JsonIgnore
-    val pesoActual: Int
-        get() {
-            var pesoActual = 0
-            for (item in inventario) {
-                pesoActual += item.peso
-            }
-            return pesoActual
-        }
+
 
     override fun toString(): String {
-        return nombre
+        return nombre!!
     }
 
 }

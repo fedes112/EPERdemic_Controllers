@@ -12,18 +12,18 @@ import java.util.*
 class PersonajeControllerREST(private val personajeService: PersonajeService) {
 
   @PostMapping
-  fun create(@RequestBody personaje: Personaje): ResponseEntity<String> {
-    val personajeName= personajeService.create(personaje)
-    return ResponseEntity<String>(personajeName, HttpStatus.CREATED)
+  fun create(@RequestBody personaje: Personaje): ResponseEntity<Long> {
+    val personajeId= personajeService.create(personaje)
+    return ResponseEntity<Long>(personajeId, HttpStatus.CREATED)
   }
 
-  @GetMapping("/{name}")
-  fun findByName(@PathVariable name: String) = personajeService.findByName(name)
+  @GetMapping("/{id}")
+  fun findByName(@PathVariable id: Long) = personajeService.findById(id)
 
-  @DeleteMapping("/{name}")
-  fun deleteByName(@PathVariable name: String){
-    Optional.ofNullable(personajeService.findByName(name))
-    personajeService.deleteByName(name)
+  @DeleteMapping("/{id}")
+  fun deleteByName(@PathVariable id: Long){
+    Optional.ofNullable(personajeService.findById(id))
+    personajeService.deleteById(id)
   }
 
 }
